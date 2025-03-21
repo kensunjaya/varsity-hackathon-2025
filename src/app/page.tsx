@@ -1,4 +1,5 @@
 "use client";
+import Navbar from "@/components/ui/navbar";
 import { WorldMap } from "@/components/ui/world-map";
  
 export default function Home() {
@@ -6,6 +7,8 @@ export default function Home() {
     <div className="bg-primary flex items-center justify-center font-primary w-full min-h-screen">
       <img src="/pen1.svg" className="absolute left-0 top-[50%]" />
       <img src="/pen2.svg" className="absolute right-0 top-[20%]" />
+      <img src="/grad-bg.svg" className="absolute top-0" />
+      <Navbar />
       <WorldMap
         size={20}
         dots={[
