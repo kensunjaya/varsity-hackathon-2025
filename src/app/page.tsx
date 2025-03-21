@@ -1,64 +1,28 @@
 "use client";
 import { WorldMap } from "@/components/ui/world-map";
-import { motion } from "motion/react";
  
 export default function Home() {
   return (
-    <div className=" py-40 dark:bg-black bg-white w-full">
-      <div className="max-w-7xl mx-auto text-center">
-        <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
-          Remote{" "}
-          <span className="text-neutral-400">
-            {"Connectivity".split("").map((word, idx) => (
-              <motion.span
-                key={idx}
-                className="inline-block"
-                initial={{ x: -10, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.04 }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </span>
-        </p>
-        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-          Break free from traditional boundaries. Work from anywhere, at the
-          comfort of your own studio apartment. Perfect for Nomads and
-          Travellers.
-        </p>
-      </div>
+    <div className="bg-primary flex items-center justify-center font-primary w-full min-h-screen">
+      <img src="/pen1.svg" className="absolute left-0 top-[50%]" />
+      <img src="/pen2.svg" className="absolute right-0 top-[20%]" />
       <WorldMap
+        size={20}
         dots={[
           {
-            start: {
-              lat: 64.2008,
-              lng: -149.4937,
-            }, // Alaska (Fairbanks)
-            end: {
-              lat: 34.0522,
-              lng: -118.2437,
-            }, // Los Angeles
+            props: { lat: -17.331671385663018, lng: 113.06035799500526 }, // Jakarta, Indonesia
           },
           {
-            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
-            end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+            props: { lat: -42.788532946834664, lng: 150.9023308813543 }, // Australia
           },
           {
-            start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-            end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+            props: { lat: -2.486930353845509, lng: -75.672517986923566 }, // Brazil (Brasília)
           },
           {
-            start: { lat: 51.5074, lng: -0.1278 }, // London
-            end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+            props: { lat: 51.5074, lng: -0.1278 }, // London
           },
           {
-            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-            end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
-          },
-          {
-            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-            end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+            props: { lat: 28.6139, lng: 77.209 }, // New Delhi
           },
         ]}
       />
