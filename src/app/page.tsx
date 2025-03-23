@@ -1,15 +1,17 @@
 "use client";
 import Navbar from "@/components/ui/navbar";
+import HomePage from "@/pages/home";
 import WorldMap from "@/pages/world-map";
 
 export default function Home() {
   return (
-    <div className="bg-primary flex items-center justify-center font-primary w-full min-h-screen">
-      <img src="/pen1.svg" className="absolute left-0 top-[50%]" />
+    <div className="bg-primary flex flex-col items-center justify-center font-primary w-full min-h-screen">
+      {/* <img src="/pen1.svg" className="absolute left-0 top-[50%]" />
       <img src="/pen2.svg" className="absolute right-0 top-[20%]" />
-      <img src="/grad-bg.svg" className="absolute top-0" />
+      <img src="/grad-bg.svg" className="absolute top-0" /> */}
       <Navbar />
-      <WorldMap
+      <HomePage />
+      {/* <WorldMap
         size={20}
         dots={[
           {
@@ -28,7 +30,7 @@ export default function Home() {
             props: { lat: 28.6139, lng: 77.209 }, // New Delhi
           },
         ]}
-      />
+      /> */}
     </div>
   );
 }
