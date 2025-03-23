@@ -17,7 +17,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
 
   const svgMap = map.getSVG({
     radius: 0.22,
-    color: "#554559",
+    color: "#595870",
     shape: "circle",
     backgroundColor: "transparent",
   });
@@ -29,7 +29,10 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center relative font-primary">
+    <div className="w-full min-h-screen flex items-center justify-center relative font-primary">
+      <img src="/pen1.svg" className="absolute w-[20vh] left-0 top-[50%]" />
+      <img src="/pen2.svg" className="absolute w-[13%] right-0 top-[30%]" />
+      <img src="/grad-ellipse-top.svg" className="absolute w-full top-0" />
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="w-[80%] select-none"
@@ -41,17 +44,8 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
       <svg
         ref={svgRef}
         viewBox="0 0 800 400"
-        className="w-full h-full absolute inset-0 select-none"
+        className="h-full absolute w-[80%] inset-0 select-none"
       >
-        {/* <defs>
-          <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="white" stopOpacity="0" />
-            <stop offset="5%" stopColor={lineColor} stopOpacity="1" />
-            <stop offset="95%" stopColor={lineColor} stopOpacity="1" />
-            <stop offset="100%" stopColor="white" stopOpacity="0" />
-          </linearGradient>
-        </defs> */}
-
         {dots.map((dot, i) => (
           <image
             x={projectPoint(dot.props.lat, dot.props.lng).x}
