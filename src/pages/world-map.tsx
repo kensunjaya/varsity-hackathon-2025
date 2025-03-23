@@ -11,10 +11,7 @@ interface MapProps {
   size: number;
 }
 
-export function WorldMap({
-  dots = [],
-  size = 15,
-}: MapProps) {
+export default function WorldMap({ dots = [], size = 15 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
@@ -46,7 +43,6 @@ export function WorldMap({
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 select-none"
       >
-        
         {/* <defs>
           <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="white" stopOpacity="0" />

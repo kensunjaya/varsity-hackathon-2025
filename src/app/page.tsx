@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/components/ui/navbar";
-import { WorldMap } from "@/components/ui/world-map";
- 
+import WorldMap from "@/pages/world-map";
+
 export default function Home() {
   return (
     <div className="bg-primary flex items-center justify-center font-primary w-full min-h-screen">
