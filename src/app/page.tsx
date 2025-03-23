@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/components/ui/navbar";
-import HomePage from "@/pages/home";
-import WorldMap from "@/pages/world-map";
+import Hero from "@/pages/Hero";
+// import WorldMap from "@/pages/world-map";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <img src="/pen2.svg" className="absolute right-0 top-[20%]" />
       <img src="/grad-bg.svg" className="absolute top-0" /> */}
       <Navbar />
-      <HomePage />
+      <Hero />
       {/* <WorldMap
         size={20}
         dots={[
