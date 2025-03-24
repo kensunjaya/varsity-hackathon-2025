@@ -1,4 +1,5 @@
 "use client";
+import CampaignsHighlight from "@/components/campaigns-highlight";
 import Motto from "@/components/motto";
 import Navbar from "@/components/ui/navbar";
 import WorldMap from "@/components/ui/world-map";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Motto />
+      <CampaignsHighlight />
       <WorldMap
         size={20}
         dots={campaignData}
