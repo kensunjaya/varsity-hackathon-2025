@@ -34,10 +34,13 @@ export const ImpactCard = (
         <div className="flex">
           {shortDesc}
         </div>
-        <div>
-          <div className="flex flex-col space-y-3">
+        <div className="space-y-1">
+          <div className="flex flex-col">
             <div>
-             {`Raised: $${raised.toLocaleString()} / $${goal.toLocaleString()}`}
+              {"Raised"}
+            </div>
+            <div>
+             {`$${raised.toLocaleString()} / $${goal.toLocaleString()}`}
             </div>
           </div>
           <div className="h-2 bg-primary rounded-lg overflow-hidden">

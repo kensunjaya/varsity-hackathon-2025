@@ -2,6 +2,7 @@
 import Navbar from "@/components/ui/navbar";
 import WorldMap from "@/components/ui/world-map";
 import { campaignData } from "@/contents/resources";
+import CampaignDetail from "@/pages/CampaignDetail";
 import Hero from "@/pages/Hero";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         size={20}
         dots={campaignData}
       />
+      <CampaignDetail detail={campaignData[4].campaign} />
     </div>
   );
 }
