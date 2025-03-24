@@ -30,9 +30,21 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center relative font-primary">
-      <img src="/pen1.svg" className="absolute w-[20vh] left-0 top-[50%]" />
-      <img src="/pen2.svg" className="absolute w-[13%] right-0 top-[30%]" />
-      <img src="/grad-ellipse-top.svg" className="absolute w-full top-0" />
+    <Image
+      src="/pen1.svg"
+      className="absolute w-[20vh] left-0 top-[50vh]"
+      alt=""
+      width={100}
+      height={100}
+    />
+    <Image
+      src="/pen2.svg"
+      className="absolute w-[20vh] right-0 top-[30vh]"
+      alt=""
+      width={100}
+      height={100}
+    />
+    <Image src="/grad-ellipse-top.svg" className="absolute w-full top-0" alt="" width={100} height={100} />
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="w-[80%] select-none"
