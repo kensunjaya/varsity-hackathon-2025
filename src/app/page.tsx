@@ -1,4 +1,5 @@
 "use client";
+import Motto from "@/components/motto";
 import Navbar from "@/components/ui/navbar";
 import WorldMap from "@/components/ui/world-map";
 import { campaignData } from "@/contents/resources";
@@ -9,6 +10,7 @@ export default function Home() {
     <div className="bg-primary flex flex-col items-center justify-center font-primary w-full min-h-screen">
       <Navbar />
       <Hero />
+      <Motto />
       <WorldMap
         size={20}
         dots={campaignData}
