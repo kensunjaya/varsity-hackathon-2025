@@ -11,9 +11,9 @@ export default function MottoCard({
             <div className="rounded-b-xl">
                 <Image src={motto.image} alt={motto.title} width={400} height={500} className="w-full h-56 object-cover rounded-xl" />
             </div>
-            <div className="p-4">
+            <div className="p-4 flex flex-col gap-4">
                 <h1 className="text-center text-2xl">{motto.title}</h1>
-                <p className="font-redhat">{motto.description}</p>
+                <p className="font-redhat text-balance">{motto.description}</p>
             </div>
         </div>
     )
