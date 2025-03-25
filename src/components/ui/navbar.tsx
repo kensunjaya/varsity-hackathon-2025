@@ -18,7 +18,7 @@ const Navbar = () => {
         <li className="flex">
           <button className="flex items-center justify-center">
             <img src="/home-button.svg" alt="home-btn" className="w-2xs" />
-            <h1 className="absolute text-3xl text-[#EEEEEE]">H O M E</h1>
+            <h1 className="absolute text-3xl text-dark">H O M E</h1>
           </button>
         </li>
         <li className="flex">
