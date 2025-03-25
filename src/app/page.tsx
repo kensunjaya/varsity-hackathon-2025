@@ -9,15 +9,14 @@ import Hero from "@/pages/Hero";
 
 export default function Home() {
   return (
-    <div className="bg-primary flex flex-col items-center justify-center font-primary w-full min-h-screen">
+    <div className="relative flex-col items-center justify-center font-primary w-full min-h-screen">
+      {/* <div className="absolute top-0 left-0 right-0 z-50"> */}
       <Navbar />
+      {/* </div> */}
       <Hero />
       <Motto />
       <CampaignsHighlight />
-      <WorldMap
-        size={20}
-        dots={campaignData}
-      />
+      <WorldMap size={20} dots={campaignData} />
       <CampaignDetail detail={campaignData[3].campaign} />
     </div>
   );
