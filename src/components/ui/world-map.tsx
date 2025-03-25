@@ -6,7 +6,7 @@ import { ImpactCard } from "./impact-card";
 interface MapProps {
   dots?: Array<{
     coord: { lat: number; lng: number; label?: string },
-    campaign: { title: string; description: string; thumbnail: string; goal: number; raised: number };
+    campaign: { title: string; description: string; shortDesc: string, thumbnail: string; goal: number; raised: number };
   }>;
   size: number;
 }
@@ -34,24 +34,25 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
     visible: boolean;
     title: string;
     description: string;
+    shortDesc: string;
     goal: number;
     raised: number;
     thumbnail: string;
-  }>({ x: 0, y: 0, title: "", description: "", goal: 0, raised: 0, thumbnail: "", visible: false });
+  }>({ x: 0, y: 0, title: "", description: "", shortDesc: "", goal: 0, raised: 0, thumbnail: "", visible: false });
 
-  const showImpactCard = (e: React.MouseEvent<SVGImageElement>, title: string, description: string, goal: number, raised: number, thumbnail: string) => {
+  const showImpactCard = (e: React.MouseEvent<SVGImageElement>, title: string, description: string, shortDesc: string, goal: number, raised: number, thumbnail: string) => {
     console.log("mouse entered");
     const rect = svgRef.current?.getBoundingClientRect();
     if (!rect) return
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    setImpactCard({ x: x, y: y, title: title, description: description, goal: goal, raised: raised, thumbnail: thumbnail, visible: true });
+    setImpactCard({ x: x, y: y, title: title, description: description, shortDesc: shortDesc, goal: goal, raised: raised, thumbnail: thumbnail, visible: true });
     console.log("set card")
   };
 
   const hideImpactCard = () => {
     setTimeout(() => {
-      setImpactCard({ x: 0, y: 0, title: "", description: "", goal: 0, raised: 0, thumbnail: "", visible: false });
+      setImpactCard({ x: 0, y: 0, title: "", description: "", shortDesc: "", goal: 0, raised: 0, thumbnail: "", visible: false });
     }, 1000)
   };
 
@@ -76,7 +77,6 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
         width={100}
         height={100}
       />
-      {/* <Image src="/grad-ellipse-top.svg" className="absolute w-full top-0" alt="" width={100} height={100} /> */}
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="w-[80%] select-none"
@@ -96,7 +96,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
             y={projectPoint(dot.coord.lat, dot.coord.lng).y}
             width={size}
             height={size}
-            onMouseEnter={(e) => showImpactCard(e, dot.campaign.title, dot.campaign.description, dot.campaign.goal, dot.campaign.raised, dot.campaign.thumbnail)}
+            onMouseEnter={(e) => showImpactCard(e, dot.campaign.title, dot.campaign.description, dot.campaign.shortDesc, dot.campaign.goal, dot.campaign.raised, dot.campaign.thumbnail)}
             onMouseLeave={hideImpactCard}
             className="hover:cursor-pointer hover:-translate-y-0.5 transform transition-transform duration-300"
             href="/pinpoint.svg"
@@ -105,7 +105,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
         ))}
       </svg>
       {impactCard.visible && (
-        <ImpactCard x={impactCard.x} y={impactCard.y} title={impactCard.title} shortDesc={impactCard.description} goal={impactCard.goal} raised={impactCard.raised} thumbnail={impactCard.thumbnail} />
+        <ImpactCard x={impactCard.x} y={impactCard.y} title={impactCard.title} shortDesc={impactCard.shortDesc} goal={impactCard.goal} raised={impactCard.raised} thumbnail={impactCard.thumbnail} />
       )}
     </div>
   );

@@ -18,7 +18,7 @@ export default function Home() {
         size={20}
         dots={campaignData}
       />
-      <CampaignDetail detail={campaignData[2].campaign} />
+      <CampaignDetail detail={campaignData[3].campaign} />
     </div>
   );
 }
