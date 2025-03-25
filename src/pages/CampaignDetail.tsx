@@ -33,7 +33,7 @@ const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
           backgroundPosition: 'center' 
         }}
       />
-      <div className="overflow-y-auto flex-col absolute text-black z-10 py-10 px-15 bg-white bottom-0 top-[10rem] rounded-t-4xl left-[15rem] right-[15rem]">
+      <div className="overflow-y-auto flex-col absolute text-black z-10 py-10 px-15 bg-sixth bottom-0 top-[10rem] rounded-t-4xl left-[15rem] right-[15rem]">
         <div className="flex justify-center">
           <button 
             className="text-2xl hover:shadow-3xl font-bold hover:cursor-pointer relative h-[10vh] flex items-center bg-primary rounded-lg w-[80vh] overflow-hidden"
