@@ -10,6 +10,8 @@ export type CampaignDetailType = {
   goal: number;
   raised: number;
   thumbnail: string;
+  deadline: string;
+  institution: string;
 }
 
 export type Coordinate = {

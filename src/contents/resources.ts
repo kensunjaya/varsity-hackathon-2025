@@ -15,8 +15,9 @@ export const campaignData: Campaign[] = [
         thumbnail: Jakarta.src,
         goal: 75000,
         raised: 34361,
+        deadline: "30 November 2025",
+        institution: "Jakarta Disaster Aid Foundation (JDAF)",
       }
-
     },
     {
       coord: { lat: -27.940115171073487, lng: 110.079395477373 }, // Australia
@@ -27,6 +28,8 @@ export const campaignData: Campaign[] = [
         thumbnail: Australia.src,
         goal: 50000,
         raised: 24605,
+        deadline: "30 October 2025",
+        institution: "GreenFuture Australia",
       }
     },
     {
@@ -38,6 +41,8 @@ export const campaignData: Campaign[] = [
         thumbnail: Brazil.src,
         goal: 200000,
         raised: 124605,
+        deadline: "15 September 2025",
+        institution: "Amazon Rainforest Preservation Alliance (ARPA)",
       }
     },
     {
@@ -49,6 +54,8 @@ export const campaignData: Campaign[] = [
         thumbnail: Africa.src,
         goal: 100000,
         raised: 64120,
+        deadline: "10 December 2025",
+        institution: "AquaLife Africa",
       }
     },
     {
@@ -60,6 +67,8 @@ export const campaignData: Campaign[] = [
         thumbnail: India.src,
         goal: 50000,
         raised: 37983,
+        deadline: "1 January 2026",
+        institution: "HungerFree Bangladesh",
       }
     },
-]
+];

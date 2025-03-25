@@ -76,7 +76,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
         width={100}
         height={100}
       />
-      <Image src="/grad-ellipse-top.svg" className="absolute w-full top-0" alt="" width={100} height={100} />
+      {/* <Image src="/grad-ellipse-top.svg" className="absolute w-full top-0" alt="" width={100} height={100} /> */}
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="w-[80%] select-none"
