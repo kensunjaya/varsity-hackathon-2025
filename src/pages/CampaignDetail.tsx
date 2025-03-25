@@ -1,3 +1,5 @@
+"use client"
+
 import { CampaignDetailType } from "@/types/structure";
 import { useState } from "react";
 
