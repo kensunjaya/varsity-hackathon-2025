@@ -17,7 +17,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
 
   const svgMap = map.getSVG({
     radius: 0.22,
-    color: "#595870",
+    color: "#8C8075",
     shape: "circle",
     backgroundColor: "transparent",
   });
@@ -62,21 +62,7 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
   , [impactCard]);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative font-primary">
-      <Image
-        src="/pen1.svg"
-        className="absolute w-[20vh] left-0 top-[50vh]"
-        alt=""
-        width={100}
-        height={100}
-      />
-      <Image
-        src="/pen2.svg"
-        className="absolute w-[20vh] right-0 top-[30vh]"
-        alt=""
-        width={100}
-        height={100}
-      />
+    <div className="w-full min-h-screen bg-seventh flex items-center justify-center relative font-primary">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="w-[80%] select-none"
