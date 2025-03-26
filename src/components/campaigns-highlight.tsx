@@ -46,9 +46,9 @@ let campaignHighlights: CampaignHighlightModel[] = [
 export default function CampaignsHighlight() {
     return (
         <div className="bg-gradient-to-b from-[#ECEDE7] to-seventh w-full flex flex-col gap-4 p-8 items-center">
-            <h1 className="text-center text-4xl font-bold mb-6 text-black">Campaign Highlights</h1>
-            <div className="flex justify-end w-full max-w-5xl">
-                <Link href={"/campaigns"}>
+            <h1 className="text-center text-4xl mb-6 text-black tracking-wide">Campaign Highlights</h1>
+            <div className="flex font-redhat justify-end w-full max-w-5xl">
+                <Link href={"/campaigns"} className="hover:-translate-y-0.5 transition duration-200">
                     See all campaigns 
                     <ChevronRight className="inline-block"/>
                 </Link>
