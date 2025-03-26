@@ -23,6 +23,8 @@ import Card18 from "@/images/Card18.png";
 import Card19 from "@/images/Card19.png";
 import Card20 from "@/images/Card20.png";
 import Card21 from "@/images/Card21.png";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   const images = [
@@ -78,9 +80,11 @@ const Hero = () => {
       />
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-6">
         <Image src={appName} alt="app-name" width={600} height={200} />
-        <button className="bg-primary text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-[Red_Hat_Display]">
-          See All Campaign
-        </button>
+        <Link href={"/campaigns"}>
+          <Button className="bg-primary text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-redhat">
+            See All Campaign
+          </Button>
+        </Link>
       </div>
     </div>
   );

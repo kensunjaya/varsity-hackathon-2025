@@ -70,9 +70,9 @@ export default function WorldMap({ dots = [], size = 15 }: MapProps) {
 
   return (
     <div className="">
-      <div className="text-center bg-seventh">
-        <h1 className="text-3xl">Impact Map</h1>
-        <p className="text-muted-foreground">See where our platform has made contributions</p>
+      <div className="text-center bg-seventh pt-20">
+        <h1 className="text-4xl">Impact</h1>
+        <p className="text-muted-foreground">Our platform has made impact around the world</p>
       </div>
       <div className="w-full min-h-screen bg-seventh flex items-center justify-center relative font-primary">
         <Image
