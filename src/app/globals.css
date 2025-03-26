@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 @import "tailwindcss";
-
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -17,7 +16,8 @@
   --color-fourth: #CE9807;
   --color-fifth: #EFC402;
   --color-sixth: #FEFAE5;
-  --color-seventh: #EAD5C3;
+  --color-seventh: #FFE77B;
+  --color-eight: #F6C794;
   --color-dark: #333333;
 }
 
