@@ -83,7 +83,7 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-6">
         <Image src={appName} alt="app-name" width={600} height={200} />
         <Link href={"/campaigns"}>
-          <Button className="bg-seventh text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-redhat">
+          <Button className="bg-primary hover:bg-[#FFEE00] text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-redhat">
             See All Campaign
           </Button>
         </Link>

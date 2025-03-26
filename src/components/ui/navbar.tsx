@@ -24,7 +24,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
           />
         </button>
       </div>
-      <div className="flex justify-center items-center translate-y-8">
+      <div className="flex justify-center items-center translate-y-8 mr-4">
         <Image
           src="/navbar-back.svg"
           alt="navbar-bg"
@@ -64,7 +64,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
                 width={120}
                 height={120}
               />
-              <h1 className="absolute text-3xl text-dark red font-primary">
+              <h1 className="absolute text-3xl text-black red font-primary">
                 {pageName}
               </h1>
             </button>

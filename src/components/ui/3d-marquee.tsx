@@ -28,7 +28,7 @@ export const ThreeDMarquee = ({
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-8 gap-8 transform-3d"
+            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-6 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
@@ -39,7 +39,7 @@ export const ThreeDMarquee = ({
                   repeatType: "reverse",
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-8"
+                className="flex flex-col items-start gap-20"
               >
                 <div />
                 {subarray.map((image, imageIndex) => (
@@ -57,8 +57,8 @@ export const ThreeDMarquee = ({
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
                       className="aspect-[490/620] rounded-lg object-cover"
-                      width={490}
-                      height={620}
+                      width={400}
+                      height={500}
                     />
                   </div>
                 ))}
