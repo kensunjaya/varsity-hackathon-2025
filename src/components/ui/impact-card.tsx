@@ -43,8 +43,8 @@ export const ImpactCard = (
              {`$${raised.toLocaleString()} / $${goal.toLocaleString()}`}
             </div>
           </div>
-          <div className="h-2 bg-primary rounded-lg overflow-hidden">
-            <div className="h-full bg-secondary rounded-lg transition-all duration-1000" style={{ width: `${progressWidth}%` }} />
+          <div className="h-2 bg-sixth rounded-lg overflow-hidden">
+            <div className="h-full bg-fourth rounded-lg transition-all duration-1000" style={{ width: `${progressWidth}%` }} />
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function Motto() {
 
     return (
         <div className="w-full bg-[#ECEDE7] min-h-96 flex flex-col gap-10 p-10">
-            <h1 className="text-center text-3xl">Unleash Your Crypto Impact</h1>
+            <h1 className="text-center text-4xl tracking-wide">Unleash Your Crypto Impact</h1>
 
             <div className="w-full max-w-5xl mx-auto flex items-center justify-center">
                 <div className="grid grid-cols-3 place-items-center gap-10">
