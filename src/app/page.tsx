@@ -15,7 +15,6 @@ export default function Home() {
       <Motto />
       <CampaignsHighlight />
       <WorldMap size={20} dots={campaignData} />
-      <CampaignDetail detail={campaignData[3].campaign} />
     </div>
   );
 }

@@ -73,10 +73,9 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen">
       <ThreeDMarquee
-        className="pointer-events-none absolute inset-0 h-screen w-screen bg-white"
+        className="pointer-events-none absolute inset-0 h-screen w-screen bg-[#ECEDE7]"
         images={images}
       />
-
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-6">
         <Image src={appName} alt="app-name" width={600} height={200} />
         <button className="bg-primary text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-[Red_Hat_Display]">

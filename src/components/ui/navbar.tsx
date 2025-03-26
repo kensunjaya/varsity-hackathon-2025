@@ -5,9 +5,9 @@ const Navbar = () => {
     <nav className="sticky z-50 top-20">
       <div className="flex items-center">
         <img
-          src="/LOGO.png"
+          src="/LOGO.svg"
           alt=""
-          className="absolute ml-20 flex justify-center items-start"
+          className="absolute ml-20 flex justify-center items-start h-16 w-16"
         />
       </div>
       <div className="flex justify-center items-center">

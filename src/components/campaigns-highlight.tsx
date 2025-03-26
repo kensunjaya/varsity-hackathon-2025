@@ -43,7 +43,7 @@ let campaignHighlights: CampaignHighlightModel[] = [
 
 export default function CampaignsHighlight() {
     return (
-        <div className="bg-gradient-to-b from-[#D2C9BC] to-[#201F3F] w-full flex flex-col gap-4 p-8 items-center">
+        <div className="bg-gradient-to-b from-[#ECEDE7] to-seventh w-full flex flex-col gap-4 p-8 items-center">
             <h1 className="text-center text-4xl font-bold mb-6 text-black">Campaign Highlights</h1>
 
             <div className="grid grid-cols-3 grid-rows-2 gap-4 max-w-5xl w-full">
