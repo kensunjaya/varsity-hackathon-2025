@@ -75,13 +75,15 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen">
       <ThreeDMarquee
-        className="pointer-events-none absolute inset-0 h-screen w-screen bg-[#ECEDE7]"
+        className="pointer-events-none absolute inset-0 h-screen w-screen bg-sixth"
         images={images}
       />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-sixth to-transparent" />
+
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-6">
         <Image src={appName} alt="app-name" width={600} height={200} />
         <Link href={"/campaigns"}>
-          <Button className="bg-primary text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-redhat">
+          <Button className="bg-seventh text-xl font-extrabold px-4 h-14 rounded-xl text-dark cursor-pointer font-redhat">
             See All Campaign
           </Button>
         </Link>
