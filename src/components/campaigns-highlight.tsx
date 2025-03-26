@@ -1,5 +1,7 @@
 import Link from "next/link"
 import CampaignHighlightCard from "./ui/CampaignHighlightCard"
+import { Button } from "./ui/button"
+import { ChevronRight } from "lucide-react"
 
 export interface CampaignHighlightModel {
     title: string,
@@ -53,6 +55,9 @@ export default function CampaignsHighlight() {
                             <div className="absolute left-0 bottom-0 transition-transform duration-300 hover:transform hover:-translate-y-8 p-4">
                                 <h1 className="text-xl">{campaign.title}</h1>
                                 <p className="opacity-0 hover:opacity-100 transition-opacity duration-300 font-redhat">{campaign.description}</p>
+                                <Button variant={"ghost"}>
+                                    See Campaign <ChevronRight />
+                                </Button>
                             </div>
                             <div className="h-96">
                             </div>
