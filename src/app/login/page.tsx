@@ -6,8 +6,8 @@ import Navbar from "@/components/ui/navbar";
 export default function LoginPage() {
   return (
     <>
-      <Navbar pageName="Home" />
-      <LoginWithMetaMask />
+      <Navbar pageName="Login" />
+        <LoginWithMetaMask />
     </>
   );
 }
