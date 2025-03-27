@@ -18,7 +18,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
           <Image
             src="/LOGO.svg"
             alt=""
-            className="absolute ml-20 flex justify-center items-start h-16 w-16"
+            className="absolute ml-20 flex justify-center hover:cursor-pointer hover:scale-[105%] transition duration-200 items-start h-16 w-16"
             width={100}
             height={100}
           />
@@ -38,7 +38,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
               <Image
                 src="/campaign-list-logo.svg"
                 alt="leaderboard"
-                className="w-6"
+                className="w-6 hover:cursor-pointer hover:scale-[105%] transition duration-200"
                 width={120}
                 height={120}
               />
@@ -49,7 +49,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
               <Image
                 src="/globe-logo.svg"
                 alt="globe"
-                className="w-6"
+                className="w-6 hover:cursor-pointer hover:scale-[105%] transition duration-200"
                 width={120}
                 height={120}
               />
@@ -74,7 +74,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
               <Image
                 src="/account-logo.svg"
                 alt="account"
-                className="w-5"
+                className="w-5 hover:cursor-pointer hover:scale-[105%] transition duration-200"
                 width={120}
                 height={120}
               />
@@ -84,7 +84,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
             <Image
               src="/login-logo.svg"
               alt="login"
-              className="w-6"
+              className="w-6 hover:cursor-pointer hover:scale-[105%] transition duration-200"
               width={120}
               height={120}
             />
