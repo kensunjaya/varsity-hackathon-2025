@@ -5,6 +5,7 @@ import { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChevronLeft} from "lucide-react";
 import {useRouter} from "next/navigation";
+import Image from "next/image";
 
 const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
   const router = useRouter();
@@ -43,7 +44,7 @@ s      <div
       <div className={`absolute left-[15rem] top-[7rem]`}>
         <Button className={`absolute font-bold`} onClick={() => router.back()}><ChevronLeft className={`inline-block`}/> Back</Button>
       </div>
-      <div className="overflow-y-auto flex-col absolute text-black z-10 py-10 px-15 bg-sixth bottom-0 top-[10rem] rounded-t-4xl left-[15rem] right-[15rem]">
+      <div className="overflow-y-auto flex-col absolute flex gap-8 text-black z-10 py-10 px-15 bg-sixth bottom-0 top-[10rem] rounded-t-4xl left-[15rem] right-[15rem]">
         <div className="flex justify-center">
           <button 
             className="text-2xl hover:shadow-3xl font-bold hover:cursor-pointer relative h-[10vh] flex items-center bg-primary rounded-lg w-[80vh] overflow-hidden"
@@ -69,12 +70,12 @@ s      <div
           </div>
 
         </div>
-        <h1 className="text-4xl mt-10 font-bold text-center">{detail.title}</h1>
+        <h1 className="text-3xl mt-10 font-bold text-center">{detail.title}</h1>
         <p className="mt-10 text-xl">{detail.description}</p>
-        <div className="text-center mt-10 text-2xl font-bold">
+        <div className="text-center mt-10 text-xl font-semibold underline">
           By {detail.institution}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-center gap-4">
           <div className="text-2xl font-primary">RECENT DONATIONS</div>
           <div className="flex font-redhat text-lg mt-5 justify-between">
             <div className="flex flex-col">
@@ -89,7 +90,7 @@ s      <div
               <div className="font-bold mb-3">Address</div>
               {donations.map((donation, index) => (
                 <div key={index}>
-                  <div>{donation.address}</div>
+                  <div className={`underline`}>{donation.address}</div>
                 </div>
               ))}
             </div>
@@ -102,7 +103,22 @@ s      <div
               ))}
             </div>
           </div>
+          <div className={`flex flex-col items-center`}>
+            <Button>
+              See all
+            </Button>
+          </div>
         </div>
+
+        <div id={`gallery`} className={`flex flex-col gap-4`}>
+          <h1 className={`text-2xl font-primary`}>Gallery</h1>
+          <div className={`flex flex-row gap-4`}>
+            {Array.from({ length: 4 }).map((_, i) => (
+                <Image key={i} src={`/jakarta-flood/${i+1}.jpg`} alt={`flood`} width={400} height={400} className={`w-60 aspect-4/3 object-cover rounded-xl`} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

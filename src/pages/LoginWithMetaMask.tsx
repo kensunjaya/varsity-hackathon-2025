@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import Image from "next/image";
+import {Separator} from "@radix-ui/react-separator";
 
 declare global {
   interface Window {
@@ -36,10 +37,11 @@ const LoginWithMetaMask = () => {
 
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-sixth text-white">
-      <div className="flex flex-col items-center space-y-6">
+      <div className="flex flex-col items-center space-y-10">
+        <div className="text-black font-primary tracking-wide text-3xl">{"Let's get started by logging you in"}</div>
         <button
           onClick={connectWallet}
-          className="flex items-center gap-3 px-6 py-3 rounded-lg border border-blue-500 text-blue-400 font-semibold transition-all 
+          className="flex items-center hover:cursor-pointer gap-3 px-6 py-3 rounded-lg border border-blue-500 text-blue-400 font-semibold transition-all 
                     bg-white hover:bg-blue-500 hover:text-white active:scale-95"
         >
           <Image

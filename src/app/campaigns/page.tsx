@@ -26,10 +26,10 @@ export default function CampaignsPage() {
     ]
 
     return (
-        <div className="relative flex-col items-center justify-center font-primary w-full min-h-screen">
+        <div className="relative flex-col items-center justify-center font-primary w-full min-h-screen bg-yellow-50">
             <Navbar pageName="Campaigns" />
             
-            <div className="py-30 flex flex-col items-center gap-20">
+            <div className="py-50 flex flex-col items-center gap-20">
                 <CategoryComponent />
 
                 <div className="text-center flex flex-col gap-10">
