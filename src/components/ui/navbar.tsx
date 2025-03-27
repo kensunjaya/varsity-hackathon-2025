@@ -70,7 +70,7 @@ const Navbar = ({ pageName }: { pageName: string }) => {
             </button>
           </li>
           <li className="flex">
-            <button onClick={() => handleNavigation("/login")}>
+            <button onClick={() => handleNavigation("/dashboard")}>
               <Image
                 src="/account-logo.svg"
                 alt="account"
@@ -81,13 +81,15 @@ const Navbar = ({ pageName }: { pageName: string }) => {
             </button>
           </li>
           <li className="flex">
-            <Image
-              src="/login-logo.svg"
-              alt="login"
-              className="w-6 hover:cursor-pointer hover:scale-[105%] transition duration-200"
-              width={120}
-              height={120}
-            />
+            <button onClick={() => handleNavigation("/login")}>
+              <Image
+                src="/login-logo.svg"
+                alt="login"
+                className="w-6 hover:cursor-pointer hover:scale-[105%] transition duration-200"
+                width={120}
+                height={120}
+              />
+            </button>
           </li>
         </ul>
       </div>
