@@ -2,8 +2,13 @@
 
 import { CampaignDetailType } from "@/types/structure";
 import { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {ChevronLeft} from "lucide-react";
+import {useRouter} from "next/navigation";
 
 const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
+  const router = useRouter();
+
   const [progressWidth, setProgressWidth] = useState(0);
 
   // create random entries, including the address and timestamp and amount must be randomized
@@ -27,7 +32,7 @@ const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
 
   return (
     <div className="flex flex-col w-screen text-justify tracking-wider min-h-screen font-redhat relative">
-      <div 
+s      <div
         className="absolute inset-0"
         style={{ 
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 50%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.9)), url(${detail.thumbnail})`, 
@@ -35,6 +40,9 @@ const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
           backgroundPosition: 'center' 
         }}
       />
+      <div className={`absolute left-[15rem] top-[7rem]`}>
+        <Button className={`absolute font-bold`} onClick={() => router.back()}><ChevronLeft className={`inline-block`}/> Back</Button>
+      </div>
       <div className="overflow-y-auto flex-col absolute text-black z-10 py-10 px-15 bg-sixth bottom-0 top-[10rem] rounded-t-4xl left-[15rem] right-[15rem]">
         <div className="flex justify-center">
           <button 
@@ -62,7 +70,7 @@ const CampaignDetail = ({ detail }: { detail: CampaignDetailType }) => {
 
         </div>
         <h1 className="text-4xl mt-10 font-bold text-center">{detail.title}</h1>
-        <p className="mt-10 text-2xl">{detail.description}</p>
+        <p className="mt-10 text-xl">{detail.description}</p>
         <div className="text-center mt-10 text-2xl font-bold">
           By {detail.institution}
         </div>
