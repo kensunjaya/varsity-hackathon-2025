@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { Button } from "./button";
 
 export default function CategoryComponent() {
 
-    let categories = [
+    const categories = [
         {
             name: "Social Causes",
             image: "/icons/social-causes.svg",

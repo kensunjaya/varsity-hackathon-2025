@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import Image from "next/image";
-import {Separator} from "@radix-ui/react-separator";
 
 declare global {
   interface Window {

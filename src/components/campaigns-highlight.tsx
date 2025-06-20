@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CampaignHighlightCard from "./ui/CampaignHighlightCard";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
 

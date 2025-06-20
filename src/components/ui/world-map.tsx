@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState, useCallback } from "react";
 import DottedMap from "dotted-map";
 import Image from "next/image";
