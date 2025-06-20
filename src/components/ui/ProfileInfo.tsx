@@ -1,4 +1,4 @@
-import Profile, { ProfileInfoProps } from "../profile";
+import { ProfileInfoProps } from "../profile";
 
 export default function ProfileInfo({profileInfo} : {profileInfo: ProfileInfoProps}) {
     return(

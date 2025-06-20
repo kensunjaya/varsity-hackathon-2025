@@ -4,7 +4,7 @@ import Navbar from "@/components/ui/navbar"
 
 export default function CampaignsPage() {
 
-    let socialCauses = [
+    const socialCauses = [
         {
             name: "Tornado Recovery & Rebuilding Houses",
             category: "Social Causes",
